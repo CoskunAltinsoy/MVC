@@ -1,0 +1,77 @@
+﻿@model Entities.Concrete.LandProperty
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Güncelle</h1>
+@using (Html.BeginForm("Update","LandProperty",FormMethod.Post))
+{
+   @Html.HiddenFor(m=>m.Id)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Price)
+        @Html.TextBoxFor(m=>m.Price, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Picture)
+        @Html.TextBoxFor(m=>m.Picture, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Video)
+        @Html.TextBoxFor(m=>m.Video, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ListingDate)
+        @Html.TextBoxFor(m=>m.ListingDate, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AdvertState)
+        @Html.TextBoxFor(m=>m.AdvertState, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AdvertNo)
+        @Html.TextBoxFor(m=>m.AdvertNo, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Square)
+        @Html.TextBoxFor(m=>m.Square, new {@class="form-control"})
+    </div>
+     <div class="form-group">
+        @Html.LabelFor(m => m.ExchangeStatus)
+        @Html.TextBoxFor(m=>m.ExchangeStatus, new {@class="form-control"})
+    </div>
+     <div class="form-group">
+        @Html.LabelFor(m => m.City)
+        @Html.TextBoxFor(m=>m.City, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.District)
+        @Html.TextBoxFor(m=>m.District, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Street)
+        @Html.TextBoxFor(m=>m.Street, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Precedent)
+        @Html.TextBoxFor(m=>m.Precedent, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Template)
+        @Html.TextBoxFor(m=>m.Template, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DeedStatus)
+        @Html.TextBoxFor(m=>m.DeedStatus, new {@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LandType)
+        @Html.TextBoxFor(m=>m.LandType, new {@class="form-control"})
+    </div>
+   
+
+    <br />
+    <button type="submit" class="btn btn-success">Güncelle</button>
+
+}
+

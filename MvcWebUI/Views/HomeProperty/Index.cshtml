@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Entities.Concrete.HomeProperty>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ev</h1>
+<table class="table table-hover">
+    <tr>
+        <th>Apartman Tipi</th>
+        <th>Oda Sayısı</th>
+        <th>Banyo Sayısı</th>
+        <th>Apartman Yaşı</th>
+        <th>Kat</th>
+        <th>Tapu Durumu</th>
+        <th>Isınma Tipi</th>
+        <th>Cephe</th>
+        <th>Eşya Durumu</th>
+        <th>Asansör</th>
+        <th>Park Yeri</th>
+        <th>Price</th>
+        <th>Picture</th>
+        <th>Video</th>
+        <th>ListingDate</th>
+        <th>AdvertNo</th>
+        <th>AdvertState</th>
+        <th>Square</th>
+        <th>Takas</th>
+        <th>City</th>
+        <th>District</th>
+        <th>Street</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ApartmentType</td>
+            <td>@item.NumberOfRoom</td>
+            <td>@item.NumberOfBath</td>
+            <td>@item.AgeOfApartment</td>
+            <td>@item.WhichFloor</td>
+            <td>@item.DeedStatus</td>
+            <td>@item.WarmType</td>
+            <td>@item.Facede</td>
+            <td>@item.FurnitureStatus</td>
+            <td>@item.Lift</td>
+            <td>@item.CarPark</td>
+            <td>@item.Price</td>
+            <td>@item.Picture</td>
+            <td>@item.Video</td>
+            <td>@item.ListingDate</td>
+            <td>@item.AdvertNo</td>
+            <td>@item.AdvertState</td>
+            <td>@item.Square</td>
+            <td>@item.ExchangeStatus</td>
+            <td>@item.City</td>
+            <td>@item.District</td>
+            <td>@item.Street</td>
+            <td><a class="btn btn-primary" href="/HomeProperty/Update/@item.Id">Güncelle</a></td>
+            <td><a class="btn btn-danger" href="/HomeProperty/Delete/@item.Id">Sil</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/HomeProperty/Add/" class= "btn btn-primary">Ev Ekle</a>

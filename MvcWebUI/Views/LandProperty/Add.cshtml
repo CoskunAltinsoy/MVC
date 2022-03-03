@@ -1,0 +1,91 @@
+﻿@model Entities.Concrete.LandProperty
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kullanıcı Ekleme</h2>
+@using (Html.BeginForm("Add","LandProperty",FormMethod.Post))
+{
+   
+    <div class="form-group">      
+        @Html.Label("Fiyat")
+        @Html.TextBoxFor(m=>m.Price, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Price)
+    </div>
+    <div class="form-group">
+        @Html.Label("Fotoğraf")
+        @Html.TextBoxFor(m=>m.Picture, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Picture)
+    </div>
+    <div class="form-group">
+        @Html.Label("Video")
+        @Html.TextBoxFor(m=>m.Video, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Video)
+    </div>
+    @*<div class="form-group">
+        @Html.LabelFor(m => m.ListingDate)
+        @Html.TextBoxFor(m=>m.ListingDate, new {@class="form-control"})
+    </div>*@
+    <div class="form-group">
+        @Html.Label("İlan Durumu")
+        @Html.TextBoxFor(m=>m.AdvertState, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.AdvertState)
+    </div>
+    <div class="form-group">
+        @Html.Label("İlan No")
+        @Html.TextBoxFor(m=>m.AdvertNo, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.AdvertNo)
+    </div>
+    <div class="form-group">
+        @Html.Label("Metrekare")
+        @Html.TextBoxFor(m=>m.Square, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Square)
+    </div>
+    <div class="form-group">
+        @Html.Label("Takas Durumu")
+        @Html.TextBoxFor(m=>m.ExchangeStatus, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.ExchangeStatus)
+    </div>
+     <div class="form-group">
+        @Html.Label("Şehir")
+        @Html.TextBoxFor(m=>m.City, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.City)
+    </div>
+    <div class="form-group">
+        @Html.Label("İlçe")
+        @Html.TextBoxFor(m=>m.District, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.District)
+    </div>
+    <div class="form-group">
+        @Html.Label("Sokak")
+        @Html.TextBoxFor(m=>m.Street, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Street)
+    </div>
+    <div class="form-group">
+        @Html.Label("Emsal")
+        @Html.TextBoxFor(m=>m.Precedent, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Precedent)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Template)
+        @Html.TextBoxFor(m=>m.Template, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.Template)
+    </div>
+    <div class="form-group">
+        @Html.Label("Tapu Durumu")
+        @Html.TextBoxFor(m=>m.DeedStatus, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.DeedStatus)
+    </div>
+    <div class="form-group">
+        @Html.Label("Arsa Tipi")
+        @Html.TextBoxFor(m=>m.LandType, new {@class="form-control"})
+        @Html.ValidationMessageFor(x => x.LandType)
+    </div>
+    
+
+    <br />
+    <button type="submit" class="btn btn-success">Ekle</button>
+
+}
+

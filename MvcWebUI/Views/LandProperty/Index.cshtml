@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Entities.Concrete.LandProperty>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Arazi</h1>
+<table class="table table-hover">
+    <tr>
+        <th>Fiyat</th>
+        <th>Resim</th>
+        <th>Video</th>
+        <th>İlan Tarihi</th>
+        <th>İlan No</th>
+        <th>İlan Durumu</th>
+        <th>Metrekare</th>
+        <th>Takas</th>
+        <th>Şehir</th>
+        <th>İlçe</th>
+        <th>Sokak</th>
+        <th>Emsal</th>
+        <th>Template</th>
+        <th>Tapu Durumu</th>
+        <th>Arazi Tipi</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Price</td>
+            <td>@item.Picture</td>
+            <td>@item.Video</td>
+            <td>@item.ListingDate</td>
+            <td>@item.AdvertNo</td>
+            <td>@item.AdvertState</td>
+            <td>@item.Square</td>
+            <td>@item.ExchangeStatus</td>
+            <td>@item.City</td>
+            <td>@item.District</td>
+            <td>@item.Street</td>
+            <td>@item.Precedent</td>
+            <td>@item.Template</td>
+            <td>@item.DeedStatus</td>
+            <td>@item.LandType</td>           
+            <td><a class="btn btn-primary" href="/LandProperty/Update/@item.Id">Güncelle</a></td>
+            <td><a class="btn btn-danger" href="/LandProperty/Delete/@item.Id">Sil</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/LandProperty/Add/" class= "btn btn-primary">Arazi Ekle</a>
